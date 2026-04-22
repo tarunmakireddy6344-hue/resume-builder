@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiMail, FiSend, FiCheck, FiMapPin, FiClock, FiHeart } from 'react-icons/fi';
-import './About.css';
+
 
 const team = [
   { name: 'Rahul Verma', role: 'Founder & CEO', initials: 'RV', color: '#2563EB' },

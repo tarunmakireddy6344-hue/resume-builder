@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiCheck, FiStar, FiDownload, FiEye, FiZap, FiShield, FiLayers, FiClock, FiPlus, FiUploadCloud } from 'react-icons/fi';
 import { TEMPLATES } from '../templates';
-import './Home.css';
+
 
 const features = [
   {

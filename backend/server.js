@@ -30,9 +30,11 @@ app.use('/api/ai', require('./routes/ai'));
 // send back React's index.html file.
 app.get('{/*path}', (req, res) => {
   // If the request looks like a file (has a dot in the last segment), 
-  // don't serve index.html, let it 404 or be caught by express.static
+  // and we reached this point, it means express.static didn't find it.
+  // Return 404 instead of serving index.html for missing assets.
   const url = req.url.split('?')[0];
   if (url.includes('.') && !url.endsWith('.html')) {
+    console.log(`Asset not found: ${url}`);
     return res.status(404).send('Not Found');
   }
   res.sendFile(path.join(distPath, 'index.html'));

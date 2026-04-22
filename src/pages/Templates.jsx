@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useResume } from '../context/ResumeContext';
 import { TEMPLATES } from '../templates';
 import { FiArrowRight, FiCheck } from 'react-icons/fi';
-import './Templates.css';
+
 
 const features = ['ATS Optimized', 'PDF Export', 'Live Preview', 'Free Forever'];
 

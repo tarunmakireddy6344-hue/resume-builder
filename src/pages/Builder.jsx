@@ -10,7 +10,7 @@ import {
   FiLayout, FiSave, FiRefreshCw
 } from 'react-icons/fi';
 import Onboarding from '../components/Onboarding';
-import './Builder.css';
+
 import { PRESET_COLORS } from '../config/themes';
 
 const STEPS = [

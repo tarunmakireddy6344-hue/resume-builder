@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { FiMenu, FiX, FiUser, FiLogOut } from 'react-icons/fi';
-import './Navbar.css';
+
 
 const navLinks = [
   { label: 'Home', path: '/' },
