@@ -28,7 +28,13 @@ app.use('/api/ai', require('./routes/ai'));
 
 // The "catchall" handler: for any request that doesn't match an API route,
 // send back React's index.html file.
-app.get('/*splat', (req, res) => {
+app.get('{/*path}', (req, res) => {
+  // If the request looks like a file (has a dot in the last segment), 
+  // don't serve index.html, let it 404 or be caught by express.static
+  const url = req.url.split('?')[0];
+  if (url.includes('.') && !url.endsWith('.html')) {
+    return res.status(404).send('Not Found');
+  }
   res.sendFile(path.join(distPath, 'index.html'));
 });
 

@@ -2,7 +2,7 @@
 
 .templates-hero {
   background: linear-gradient(180deg, var(--primary-light) 0%, var(--white) 100%);
-  padding: var(--sp-16) 0 var(--sp-12);
+  padding: var(--sp-20) 0 var(--sp-12);
 }
 
 .templates-hero-features {
