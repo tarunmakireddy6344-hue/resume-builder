@@ -41,7 +41,7 @@
 .creative-title {
   font-family: 'Outfit', sans-serif;
   font-size: 11px;
-  color: #93C5FD;
+  color: var(--template-text-color, #93C5FD);
   margin-bottom: 24px;
   font-weight: 600;
   text-transform: uppercase;
@@ -137,7 +137,7 @@
   gap: 8px;
   font-size: 12px;
   font-weight: 800;
-  color: #1E293B;
+  color: var(--template-text-color, #1E293B);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 10px;
@@ -189,7 +189,7 @@
 .creative-item-header strong {
   font-size: 11px;
   font-weight: 700;
-  color: #1E293B;
+  color: var(--template-text-color, #1E293B);
 }
 
 .creative-date {
@@ -256,7 +256,7 @@
 .creative-project-header strong {
   font-size: 11px;
   font-weight: 700;
-  color: #1E293B;
+  color: var(--template-text-color, #1E293B);
 }
 
 .creative-link {

@@ -1,15 +1,17 @@
 import { formatDate } from '../utils/pdfExport';
+import { getContrastColor } from '../utils/colors';
 import './SignatureTemplate.css';
 
-export default function SignatureTemplate({ resume, primaryColor }) {
+export default function SignatureTemplate({ resume, primaryColor, textColor }) {
   const { personalInfo, summary, experience, education, skills, projects, certifications } = resume;
+  const contrastColor = getContrastColor(primaryColor);
 
   return (
-    <div className="template-signature">
-      <div className="signature-sidebar" style={{ background: primaryColor }}>
-        <div className="signature-header" style={{ borderBottomColor: '#ffffff' }}>
-          <h1 className="signature-name" style={{ color: '#ffffff' }}>{personalInfo.fullName || 'Your Name'}</h1>
-          <p className="signature-title">{personalInfo.jobTitle || 'Executive Title'}</p>
+    <div className="template-signature" style={{ color: textColor, '--template-text-color': textColor }}>
+      <div className="signature-sidebar" style={{ background: primaryColor, color: contrastColor }}>
+        <div className="signature-header" style={{ borderBottomColor: contrastColor }}>
+          <h1 className="signature-name" style={{ color: contrastColor }}>{personalInfo.fullName || 'Your Name'}</h1>
+          <p className="signature-title" style={{ color: contrastColor, opacity: 0.9 }}>{personalInfo.jobTitle || 'Executive Title'}</p>
         </div>
 
         <div className="signature-contact">
@@ -72,8 +74,8 @@ export default function SignatureTemplate({ resume, primaryColor }) {
 
         {experience.length > 0 && (
           <section className="signature-main-section">
-            <h2 className="sm-title">Work History</h2>
-            <div className="sm-divider" />
+            <h2 className="sm-title" style={{ color: primaryColor }}>Work History</h2>
+            <div className="sm-divider" style={{ background: primaryColor }} />
             <div className="signature-timeline">
               {experience.map((exp) => (
                 <div key={exp.id} className="signature-timeline-item">
@@ -111,8 +113,8 @@ export default function SignatureTemplate({ resume, primaryColor }) {
 
         {education.length > 0 && (
           <section className="signature-main-section">
-            <h2 className="sm-title">Education</h2>
-            <div className="sm-divider" />
+            <h2 className="sm-title" style={{ color: primaryColor }}>Education</h2>
+            <div className="sm-divider" style={{ background: primaryColor }} />
             {education.map((edu) => (
               <div key={edu.id} className="signature-edu-item">
                 <div className="edu-header">
@@ -127,8 +129,8 @@ export default function SignatureTemplate({ resume, primaryColor }) {
 
         {projects.length > 0 && (
           <section className="signature-main-section">
-            <h2 className="sm-title">Key Projects</h2>
-            <div className="sm-divider" />
+            <h2 className="sm-title" style={{ color: primaryColor }}>Key Projects</h2>
+            <div className="sm-divider" style={{ background: primaryColor }} />
             {projects.map((proj) => (
               <div key={proj.id} className="signature-proj-item">
                 <div className="proj-header">

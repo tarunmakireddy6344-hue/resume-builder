@@ -45,33 +45,12 @@ export default function Templates() {
                 {/* Preview */}
                 <div className="template-full-preview">
                   <div className="tp-preview-inner">
-                    {/* Mock resume visual */}
-                    <div className="tp-mock-header" style={{ background: t.colors[0] }}>
-                      <div className="tp-mock-name" />
-                      <div className="tp-mock-title" />
-                      {t.id === 'creative' ? (
-                        <div className="tp-mock-avatar" />
-                      ) : (
-                        <div className="tp-mock-contacts">
-                          <div /><div /><div />
-                        </div>
-                      )}
-                    </div>
-                    <div className="tp-mock-body">
-                      {['Experience', 'Education', 'Skills'].map((sec) => (
-                        <div key={sec} className="tp-mock-section">
-                          <div className="tp-mock-section-title" style={{ background: t.colors[1] }} />
-                          <div className="tp-mock-line" />
-                          <div className="tp-mock-line" style={{ width: '80%' }} />
-                          <div className="tp-mock-line" style={{ width: '65%' }} />
-                        </div>
-                      ))}
-                      <div className={`tp-mock-skills`}>
-                        {[...Array(5)].map((_, i) => (
-                          <div key={i} className="tp-mock-skill-tag" style={{ background: `${t.colors[2]}40` }} />
-                        ))}
-                      </div>
-                    </div>
+                    <img 
+                      src={t.previewImage} 
+                      alt={t.name} 
+                      className="template-full-img"
+                      loading="lazy"
+                    />
                   </div>
                   <div className="template-badge-overlay">
                     <span className={`badge badge-${t.badgeType}`}>{t.badge}</span>

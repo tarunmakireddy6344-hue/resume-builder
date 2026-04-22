@@ -1,18 +1,20 @@
 import { formatDate } from '../utils/pdfExport';
+import { getContrastColor } from '../utils/colors';
 import './ModernTemplate.css';
 
-export default function ModernTemplate({ resume, primaryColor }) {
+export default function ModernTemplate({ resume, primaryColor, textColor }) {
   const { personalInfo, summary, experience, education, skills, projects, certifications } = resume;
+  const contrastColor = getContrastColor(primaryColor);
 
   return (
-    <div className="template-modern">
+    <div className="template-modern" style={{ color: textColor, '--template-text-color': textColor }}>
       {/* Header */}
       <div className="modern-header" style={{ background: primaryColor, borderBottom: `4px solid ${primaryColor}` }}>
-        <div className="modern-header-left">
-          <h1 className="modern-name">{personalInfo.fullName || 'Your Name'}</h1>
-          <p className="modern-title">{personalInfo.jobTitle || 'Professional Title'}</p>
+        <div className="modern-header-left" style={{ color: contrastColor }}>
+          <h1 className="modern-name" style={{ color: contrastColor }}>{personalInfo.fullName || 'Your Name'}</h1>
+          <p className="modern-title" style={{ color: contrastColor, opacity: 0.9 }}>{personalInfo.jobTitle || 'Professional Title'}</p>
         </div>
-        <div className="modern-header-right">
+        <div className="modern-header-right" style={{ color: contrastColor }}>
           {personalInfo.email && <span>✉ {personalInfo.email}</span>}
           {personalInfo.phone && <span>📱 {personalInfo.phone}</span>}
           {personalInfo.location && <span>📍 {personalInfo.location}</span>}

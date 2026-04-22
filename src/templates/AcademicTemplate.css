@@ -4,7 +4,7 @@
   font-family: 'EB Garamond', serif;
   font-size: 11px;
   line-height: 1.4;
-  color: #000;
+  color: var(--template-text-color, #444);
   padding: 40px 60px;
 }
 
@@ -117,5 +117,5 @@
 
 .academic-link {
   font-size: 9px;
-  color: #333;
+  color: var(--template-text-color, #333);
 }

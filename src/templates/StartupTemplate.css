@@ -1,0 +1,155 @@
+.template-startup {
+  background: white;
+  min-height: 100%;
+  color: var(--template-text-color, #0f172a);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+.startup-header {
+  background: #0f172a;
+  color: white;
+  padding: 40px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.startup-name {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.startup-title {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.startup-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--template-text-color, #94a3b8);
+}
+
+.startup-header-accent {
+  width: 12px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.startup-container {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 40px;
+  padding: 40px;
+}
+
+.startup-section {
+  margin-bottom: 32px;
+}
+
+.startup-section-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--template-text-color, #64748b);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 16px;
+}
+
+.startup-item {
+  margin-bottom: 20px;
+}
+
+.startup-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+
+.startup-item-role {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.startup-item-date {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.startup-item-company {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--template-text-color, #334155);
+  margin-bottom: 6px;
+}
+
+.startup-list {
+  padding-left: 14px;
+  margin-top: 6px;
+}
+
+.startup-list li {
+  font-size: 13px;
+  color: var(--template-text-color, #475569);
+  margin-bottom: 4px;
+}
+
+.startup-sidebar-section {
+  margin-bottom: 32px;
+}
+
+.startup-sidebar-label {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f172a;
+  padding-left: 12px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.startup-skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.startup-skill-tag {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.startup-sidebar-item {
+  margin-bottom: 12px;
+}
+
+.sidebar-item-title {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.sidebar-item-sub {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.sidebar-item-date {
+  font-size: 11px;
+  color: #94a3b8;
+}

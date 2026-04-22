@@ -44,7 +44,7 @@ export default function Builder() {
     addEducation, updateEducation, removeEducation,
     updateSkills, addProject, updateProject, removeProject,
     addCertification, updateCertification, removeCertification,
-    resetResume, updateColor, overwriteResume,
+    resetResume, updateColor, updateTextColor, overwriteResume,
   } = useResume();
 
   const handleReset = () => {
@@ -186,6 +186,59 @@ export default function Builder() {
                     }}
                     onMouseOver={(e) => e.target.style.transform = 'scale(1.2)'}
                     onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
+                  />
+                ))}
+              </div>
+            </div>
+            
+            {/* Text Color Switcher */}
+            <div className="template-switcher" style={{ marginTop: '1.5rem' }}>
+              <p className="sidebar-section-label">Text Color</p>
+              <div className="color-picker-container" style={{ display: 'flex', alignItems: 'center', gap: '12px', background: 'white', padding: '10px', borderRadius: '8px', border: '1px solid var(--gray-200)' }}>
+                <input 
+                  type="color" 
+                  value={resume.customTextColor || '#374151'} 
+                  onChange={(e) => updateTextColor(e.target.value)}
+                  style={{ width: '32px', height: '32px', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
+                  id="text-color-picker"
+                />
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <span style={{ fontSize: '12px', fontWeight: '700', color: 'var(--gray-700)' }}>Text Color</span>
+                  <span style={{ fontSize: '10px', color: 'var(--gray-500)' }}>{resume.customTextColor || 'System Default'}</span>
+                </div>
+                {resume.customTextColor && (
+                  <button 
+                    onClick={() => updateTextColor(null)}
+                    style={{ marginLeft: 'auto', border: 'none', background: 'none', color: 'var(--danger)', fontSize: '10px', fontWeight: '700', cursor: 'pointer' }}
+                  >
+                    Reset
+                  </button>
+                )}
+              </div>
+              
+              {/* Preset Text Colors */}
+              <div className="preset-colors" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '12px' }}>
+                {[
+                  { name: 'Black', color: '#000000' },
+                  { name: 'Dark Gray', color: '#374151' },
+                  { name: 'Medium Gray', color: '#6B7280' },
+                  { name: 'Navy', color: '#1E3A8A' },
+                  { name: 'Charcoal', color: '#334155' }
+                ].map(pc => (
+                  <button
+                    key={pc.color}
+                    className="preset-color-btn"
+                    onClick={() => updateTextColor(pc.color)}
+                    title={pc.name}
+                    style={{ 
+                      width: '20px', 
+                      height: '20px', 
+                      borderRadius: '50%', 
+                      background: pc.color, 
+                      border: resume.customTextColor === pc.color ? '2px solid #3B82F6' : '1px solid var(--gray-200)',
+                      cursor: 'pointer',
+                      transition: 'transform 0.2s'
+                    }}
                   />
                 ))}
               </div>

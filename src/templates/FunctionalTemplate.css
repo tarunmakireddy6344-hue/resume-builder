@@ -1,0 +1,138 @@
+.template-functional {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100%;
+  background: white;
+  color: var(--template-text-color, #334155);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+.functional-sidebar {
+  padding: 40px 24px;
+}
+
+.sidebar-label {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.sidebar-contact-info {
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: var(--template-text-color, #64748b);
+  word-break: break-all;
+}
+
+.sidebar-skill-section, .sidebar-edu-section {
+  margin-top: 32px;
+}
+
+.sidebar-skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-skills-list li {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--template-text-color, #334155);
+  margin-bottom: 6px;
+  padding: 2px 0;
+}
+
+.sidebar-edu-item {
+  margin-bottom: 12px;
+}
+
+.sidebar-edu-degree {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--template-text-color, #1e293b);
+}
+
+.sidebar-edu-school {
+  font-size: 11px;
+  color: var(--template-text-color, #64748b);
+}
+
+.functional-main {
+  padding: 40px 50px;
+}
+
+.functional-header {
+  margin-bottom: 32px;
+}
+
+.functional-name {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--template-text-color, #0f172a);
+  letter-spacing: -0.025em;
+  margin-bottom: 4px;
+}
+
+.functional-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--template-text-color, #64748b);
+}
+
+.functional-section {
+  margin-bottom: 32px;
+}
+
+.functional-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+}
+
+.functional-summary {
+  font-size: 14px;
+  color: var(--template-text-color, #475569);
+}
+
+.functional-item {
+  margin-bottom: 20px;
+}
+
+.functional-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.functional-role {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--template-text-color, #1e293b);
+}
+
+.functional-date {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--template-text-color, #94a3b8);
+}
+
+.functional-company {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--template-text-color, #475569);
+  margin-bottom: 6px;
+}
+
+.functional-list {
+  padding-left: 14px;
+}
+
+.functional-list li {
+  font-size: 13px;
+  color: var(--template-text-color, #334155);
+  margin-bottom: 4px;
+}

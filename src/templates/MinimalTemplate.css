@@ -3,7 +3,7 @@
   background: #fff;
   font-family: 'Inter', sans-serif;
   font-size: 11px;
-  color: #1E293B;
+  color: var(--template-text-color, #1E293B);
   padding: 48px 56px;
 }
 
@@ -41,7 +41,7 @@
 
 .minimal-summary {
   font-size: 11px;
-  color: #475569;
+  color: var(--template-text-color, #475569);
   line-height: 1.7;
 }
 
@@ -78,7 +78,7 @@
 .min-role {
   font-size: 11.5px;
   font-weight: 600;
-  color: #1E293B;
+  color: var(--template-text-color, #1E293B);
 }
 
 .min-date {
@@ -99,7 +99,7 @@
   list-style: none;
   padding-left: 0;
   font-size: 10.5px;
-  color: #475569;
+  color: var(--template-text-color, #475569);
 }
 
 .min-desc-list li {
@@ -140,7 +140,7 @@
 
 .min-skill {
   font-size: 10.2px;
-  color: #1E293B;
+  color: var(--template-text-color, #1E293B);
   padding: 4px 12px;
   background: #F8FAFC;
   border: 1px solid #E2E8F0;

@@ -19,7 +19,8 @@ const defaultResume = {
   skills: [],
   projects: [],
   certifications: [],
-  customColor: null, // User selected color
+  customColor: null, // User selected accent color
+  customTextColor: null, // User selected text color
 };
 
 const ResumeContext = createContext(null);
@@ -127,6 +128,8 @@ export function ResumeProvider({ children }) {
 
   const updateColor = (color) => setResume((r) => ({ ...r, customColor: color }));
 
+  const updateTextColor = (color) => setResume((r) => ({ ...r, customTextColor: color }));
+
   const overwriteResume = (newData) => {
     // Transition old 'description' to new 'roles' if needed
     const formattedExperience = (newData.experience || []).map(exp => ({
@@ -161,6 +164,7 @@ export function ResumeProvider({ children }) {
         addCertification, updateCertification, removeCertification,
         resetResume,
         updateColor,
+        updateTextColor,
         overwriteResume,
       }}
     >

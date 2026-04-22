@@ -5,7 +5,7 @@
   position: relative;
   overflow: hidden;
   padding: var(--sp-24) 0 var(--sp-20);
-  background: linear-gradient(180deg, #EFF6FF 0%, #F8FAFC 60%, var(--white) 100%);
+  background: radial-gradient(circle at 70% 30%, #E0F2FE 0%, #F8FAFC 50%, var(--white) 100%);
 }
 
 .hero-bg {
@@ -44,8 +44,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(37,99,235,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37,99,235,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(37,99,235,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37,99,235,0.02) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
@@ -95,7 +95,7 @@
 
 .hero-subtitle {
   font-size: var(--text-lg);
-  color: var(--gray-500);
+  color: var(--gray-600);
   line-height: 1.75;
   margin-bottom: var(--sp-8);
   max-width: 520px;
@@ -468,54 +468,16 @@
   overflow: hidden;
 }
 
-.tp-header {
-  padding: 12px;
-  height: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-}
-
-.tp-name-mock {
-  height: 10px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 4px;
-  width: 70%;
-}
-
-.tp-title-mock {
-  height: 6px;
-  background: rgba(255,255,255,0.3);
-  border-radius: 4px;
-  width: 45%;
-}
-
-.tp-body {
-  padding: 10px 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.tp-line {
-  height: 6px;
-  background: var(--gray-200);
-  border-radius: 4px;
+.tp-preview-img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: var(--transition-slow);
 }
 
-.tp-skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  margin-top: 4px;
-}
-
-.tp-skill-pill {
-  height: 12px;
-  border-radius: 99px;
-  flex-shrink: 0;
+.template-preview-card:hover .tp-preview-img {
+  transform: scale(1.05);
 }
 
 .template-preview-info {

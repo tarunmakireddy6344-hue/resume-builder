@@ -255,23 +255,12 @@ export default function Home() {
             {TEMPLATES.map((t) => (
               <Link key={t.id} to={`/builder?template=${t.id}`} className="template-preview-card" id={`template-preview-${t.id}`}>
                 <div className="template-preview-visual">
-                  <div className="tp-header" style={{ background: t.colors[0] }}>
-                    <div className="tp-name-mock" />
-                    <div className="tp-title-mock" />
-                  </div>
-                  <div className="tp-body">
-                    <div className="tp-line" style={{ background: t.colors[1], width: '60%', height: 8 }} />
-                    <div className="tp-line" />
-                    <div className="tp-line" style={{ width: '85%' }} />
-                    <div className="tp-line" style={{ width: '70%' }} />
-                    <div className="tp-line" />
-                    <div className="tp-line" style={{ width: '90%' }} />
-                    <div className="tp-skills">
-                      {[50, 65, 55, 70, 60].map((w, i) => (
-                        <div key={i} className="tp-skill-pill" style={{ width: `${w}%`, background: t.colors[2] }} />
-                      ))}
-                    </div>
-                  </div>
+                  <img 
+                    src={t.previewImage} 
+                    alt={t.name} 
+                    className="tp-preview-img"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="template-preview-info">
                   <div className="template-preview-name">{t.name}</div>

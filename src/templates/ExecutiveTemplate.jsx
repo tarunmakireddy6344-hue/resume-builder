@@ -1,11 +1,11 @@
 import { formatDate } from '../utils/pdfExport';
 import './ExecutiveTemplate.css';
 
-export default function ExecutiveTemplate({ resume, primaryColor }) {
+export default function ExecutiveTemplate({ resume, primaryColor, textColor }) {
   const { personalInfo, summary, experience, education, skills, projects, certifications } = resume;
 
   return (
-    <div className="template-executive">
+    <div className="template-executive" style={{ color: textColor, '--template-text-color': textColor }}>
       {/* Header */}
       <header className="executive-header">
         <h1 className="executive-name">{personalInfo.fullName || 'Your Name'}</h1>
@@ -85,8 +85,8 @@ export default function ExecutiveTemplate({ resume, primaryColor }) {
         <div className="executive-footer-grid">
           {skills.length > 0 && (
             <div className="footer-column">
-              <h3 className="footer-title">Expertise</h3>
-              <div className="footer-line" />
+              <h3 className="footer-title" style={{ color: primaryColor }}>Expertise</h3>
+              <div className="footer-line" style={{ background: primaryColor }} />
               <div className="executive-skills-cloud">
                 {skills.join(' · ')}
               </div>
@@ -94,8 +94,8 @@ export default function ExecutiveTemplate({ resume, primaryColor }) {
           )}
           {certifications.length > 0 && (
             <div className="footer-column">
-              <h3 className="footer-title">Certifications</h3>
-              <div className="footer-line" />
+              <h3 className="footer-title" style={{ color: primaryColor }}>Certifications</h3>
+              <div className="footer-line" style={{ background: primaryColor }} />
               {certifications.map(c => (
                 <div key={c.id} className="footer-cert">
                   <strong>{c.name}</strong> - {c.issuer}

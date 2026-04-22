@@ -18,7 +18,7 @@
   font-family: 'Playfair Display', serif;
   font-size: 32px;
   font-weight: 900;
-  color: #1E293B;
+  color: var(--template-text-color, #1E293B);
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 8px;
@@ -39,7 +39,7 @@
   flex-wrap: wrap;
   gap: 16px;
   font-size: 10.5px;
-  color: #475569;
+  color: var(--template-text-color, #475569);
 }
 
 .executive-social { margin-top: 4px; border-top: 1px solid #E2E8F0; padding-top: 8px; display: inline-flex; }
@@ -59,7 +59,7 @@
   font-family: 'Playfair Display', serif;
   font-size: 15px;
   font-weight: 700;
-  color: #1E293B;
+  color: var(--template-text-color, #1E293B);
   margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -73,7 +73,7 @@
 
 .executive-summary {
   font-style: italic;
-  color: #334155;
+  color: var(--template-text-color, #334155);
   text-align: justify;
 }
 
@@ -98,7 +98,7 @@
 
 .executive-company {
   font-weight: 400;
-  color: #475569;
+  color: var(--template-text-color, #475569);
 }
 
 .executive-date {
@@ -110,7 +110,7 @@
 .executive-list {
   padding-left: 0;
   list-style: none;
-  color: #334155;
+  color: var(--template-text-color, #334155);
 }
 
 .executive-list li {
@@ -123,13 +123,13 @@
   content: "•";
   position: absolute;
   left: 0;
-  color: #1E293B;
+  color: var(--template-text-color, #1E293B);
 }
 
 .executive-tools {
   margin-top: 6px;
   font-size: 10.5px;
-  color: #1E293B;
+  color: var(--template-text-color, #1E293B);
   background: #F1F5F9;
   padding: 4px 12px;
   border-radius: 4px;
@@ -157,14 +157,14 @@
   font-family: 'Playfair Display', serif;
   font-size: 13px;
   font-weight: 700;
-  color: #1E293B;
+  color: var(--template-text-color, #1E293B);
   margin-bottom: 6px;
 }
 
 .footer-line { height: 2px; background: #E2E8F0; margin-bottom: 10px; }
 
 .executive-skills-cloud {
-  color: #475569;
+  color: var(--template-text-color, #475569);
   line-height: 1.8;
   word-spacing: 4px;
   font-style: italic;

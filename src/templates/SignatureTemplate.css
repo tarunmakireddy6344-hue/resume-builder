@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 260px 1fr;
   font-family: 'Inter', sans-serif;
-  color: #1E293B;
+  color: var(--template-text-color, #1E293B);
 }
 
 /* Sidebar Styling */
@@ -140,7 +140,7 @@
 .signature-summary-text {
   font-size: 11px;
   line-height: 1.7;
-  color: #475569;
+  color: var(--template-text-color, #475569);
   text-align: justify;
 }
 
@@ -181,12 +181,12 @@
 .timeline-role {
   font-size: 12px;
   font-weight: 800;
-  color: #0F172A;
+  color: var(--template-text-color, #0F172A);
 }
 
 .timeline-company {
   font-size: 10.5px;
-  color: #64748B;
+  color: var(--template-text-color, #64748B);
   font-style: italic;
   font-weight: 500;
 }
@@ -203,7 +203,7 @@
   padding-left: 0;
   list-style: none;
   font-size: 10px;
-  color: #475569;
+  color: var(--template-text-color, #475569);
 }
 
 .timeline-list li {
