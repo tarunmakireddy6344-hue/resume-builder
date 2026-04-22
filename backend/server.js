@@ -18,7 +18,8 @@ mongoose.connect(MONGODB_URI)
 
 // --- SERVE FRONTEND ---
 // Serve static files from the React app build folder
-app.use(express.static(path.join(__dirname, '../dist')));
+const distPath = path.join(__dirname, '../dist');
+app.use(express.static(distPath));
 
 // API Routes
 app.use('/api/auth', require('./routes/auth'));
@@ -28,7 +29,7 @@ app.use('/api/ai', require('./routes/ai'));
 // The "catchall" handler: for any request that doesn't match an API route,
 // send back React's index.html file.
 app.get('/*splat', (req, res) => {
-  res.sendFile(path.join(__dirname, '../dist/index.html'));
+  res.sendFile(path.join(distPath, 'index.html'));
 });
 
 const PORT = process.env.PORT || 5000;
