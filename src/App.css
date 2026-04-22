@@ -1,0 +1,9 @@
+/* App-level reset for Vite defaults */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+main {
+  min-height: calc(100vh - var(--nav-height));
+}

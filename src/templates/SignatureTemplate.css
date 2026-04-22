@@ -1,0 +1,267 @@
+.template-signature {
+  width: 100%;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  font-family: 'Inter', sans-serif;
+  color: #1E293B;
+}
+
+/* Sidebar Styling */
+.signature-sidebar {
+  background: #0F172A; /* Deep Dark Indigo */
+  color: white;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.signature-header {
+  border-bottom: 2px solid #D4AF37; /* Gold Accent */
+  padding-bottom: 16px;
+}
+
+.signature-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 900;
+  color: #D4AF37;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.signature-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+}
+
+.signature-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.signature-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sc-label {
+  font-size: 9px;
+  text-transform: uppercase;
+  color: #D4AF37;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.sc-value {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.9);
+  word-break: break-all;
+}
+
+.ss-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.signature-skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.signature-skill-badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 600;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.signature-cert-item {
+  margin-bottom: 12px;
+}
+
+.cert-name {
+  font-size: 10px;
+  font-weight: 700;
+  color: white;
+}
+
+.cert-issuer {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Main Styling */
+.signature-main {
+  padding: 40px 32px;
+  background: white;
+}
+
+.signature-main-section {
+  margin-bottom: 24px;
+}
+.signature-main-section:last-child {
+  margin-bottom: 0;
+}
+
+.sm-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #0F172A;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.sm-divider {
+  width: 40px;
+  height: 3px;
+  background: #D4AF37;
+  margin-bottom: 12px;
+}
+
+.signature-summary-text {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #475569;
+  text-align: justify;
+}
+
+/* Timeline Styling */
+.signature-timeline {
+  position: relative;
+  padding-left: 20px;
+  border-left: 1px solid #E2E8F0;
+  margin-left: 6px;
+}
+
+.signature-timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+  page-break-inside: avoid;
+}
+.signature-timeline-item:last-child { margin-bottom: 0; }
+
+.timeline-dot {
+  position: absolute;
+  left: -24px;
+  top: 4px;
+  width: 7px;
+  height: 7px;
+  background: white;
+  border: 1.5px solid #D4AF37;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.timeline-role {
+  font-size: 12px;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.timeline-company {
+  font-size: 10.5px;
+  color: #64748B;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.timeline-date {
+  font-size: 9px;
+  color: #D4AF37;
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.timeline-list {
+  padding-left: 0;
+  list-style: none;
+  font-size: 10px;
+  color: #475569;
+}
+
+.timeline-list li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 2px;
+  line-height: 1.6;
+}
+
+.timeline-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #D4AF37;
+}
+
+.timeline-tools {
+  margin-top: 8px;
+  font-size: 9.5px;
+  color: #0F172A;
+  background: #F8FAFC;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  border-left: 2px solid #D4AF37;
+}
+
+.tools-label { font-weight: 800; color: #475569; text-transform: uppercase; font-size: 8px; margin-right: 4px; }
+
+/* Edu & Proj Items */
+.signature-edu-item, .signature-proj-item {
+  margin-bottom: 12px;
+  page-break-inside: avoid;
+}
+.signature-edu-item:last-child, .signature-proj-item:last-child { margin-bottom: 0; }
+
+.edu-header, .proj-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 11px;
+}
+
+.edu-institution, .proj-tech {
+  font-size: 10px;
+  color: #64748B;
+  margin-top: 2px;
+}
+
+.proj-desc {
+  font-size: 10.5px;
+  color: #475569;
+  margin-top: 4px;
+  text-align: justify;
+}
+
+.proj-link {
+  font-size: 9px;
+  color: #2563EB;
+  text-decoration: underline;
+}
